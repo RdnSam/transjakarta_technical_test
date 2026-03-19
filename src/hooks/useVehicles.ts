@@ -36,7 +36,7 @@ export const useVehicles = (params: UseVehiclesParams) => {
   return useQuery({
     queryKey: ['vehicles', params],
     queryFn: () => fetchVehicles(params),
-    refetchInterval: 15000,
+    refetchInterval: 15000,//15 detik
     placeholderData: (previousData) => previousData,
   });
 };

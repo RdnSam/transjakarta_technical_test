@@ -13,6 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 import { VehicleDetailModal } from "@/components/features/VehicleDetailModal";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const Dashboard: React.FC = () => {
   // ── State ────────────────────────────────────────────────────────────────
@@ -142,6 +143,7 @@ const Dashboard: React.FC = () => {
                   Menyinkronkan...
                 </Badge>
               )}
+              <ThemeToggle />
             </div>
           </div>
         </div>

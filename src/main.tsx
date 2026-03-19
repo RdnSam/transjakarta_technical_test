@@ -5,10 +5,14 @@ import { queryClient } from "./lib/query-client";
 import Dashboard from "./pages/Dashboard";
 import "./index.css";
 
+import { ThemeProvider } from "./components/theme-provider";
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <Dashboard />
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange storageKey="vite-ui-theme">
+        <Dashboard />
+      </ThemeProvider>
     </QueryClientProvider>
   </StrictMode>
 );
